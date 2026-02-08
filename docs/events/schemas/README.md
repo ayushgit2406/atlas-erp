@@ -1,5 +1,11 @@
 # Avro Schemas
 
-This folder will contain Avro schema files (`.avsc`) for all domain event payloads.
+This folder contains Avro schema files (`.avsc`) for domain event payloads.
 
-Schemas are added during implementation; structure is locked to support contract-first development.
+Current schemas:
+- OrderPlaced
+- InventoryReserved
+- InventoryReservationFailed
+- InvoiceCreated
+- PaymentSucceeded
+- PaymentFailed

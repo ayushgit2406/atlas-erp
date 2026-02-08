@@ -1,0 +1,13 @@
+{
+  "type": "record",
+  "name": "PaymentFailed",
+  "namespace": "atlas.erp.billing",
+  "fields": [
+    { "name": "paymentId", "type": "string" },
+    { "name": "invoiceId", "type": "string" },
+    { "name": "orderId", "type": "string" },
+    { "name": "amount", "type": "double" },
+    { "name": "currency", "type": "string" },
+    { "name": "reason", "type": "string" }
+  ]
+}

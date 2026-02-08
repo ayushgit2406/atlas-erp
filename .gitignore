@@ -23,6 +23,7 @@ __pycache__/
 # Env files
 .env
 .env.*
+infra/.env
 
 # Coverage
 coverage/

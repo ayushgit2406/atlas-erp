@@ -1,0 +1,11 @@
+{
+  "type": "record",
+  "name": "InvoiceCreated",
+  "namespace": "atlas.erp.billing",
+  "fields": [
+    { "name": "invoiceId", "type": "string" },
+    { "name": "orderId", "type": "string" },
+    { "name": "amount", "type": "double" },
+    { "name": "currency", "type": "string" }
+  ]
+}

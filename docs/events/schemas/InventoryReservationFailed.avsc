@@ -1,0 +1,9 @@
+{
+  "type": "record",
+  "name": "InventoryReservationFailed",
+  "namespace": "atlas.erp.inventory",
+  "fields": [
+    { "name": "orderId", "type": "string" },
+    { "name": "reason", "type": "string" }
+  ]
+}

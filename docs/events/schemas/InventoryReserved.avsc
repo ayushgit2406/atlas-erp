@@ -1,0 +1,23 @@
+{
+  "type": "record",
+  "name": "InventoryReserved",
+  "namespace": "atlas.erp.inventory",
+  "fields": [
+    { "name": "reservationId", "type": "string" },
+    { "name": "orderId", "type": "string" },
+    {
+      "name": "items",
+      "type": {
+        "type": "array",
+        "items": {
+          "type": "record",
+          "name": "InventoryReservationItem",
+          "fields": [
+            { "name": "sku", "type": "string" },
+            { "name": "qty", "type": "int" }
+          ]
+        }
+      }
+    }
+  ]
+}
