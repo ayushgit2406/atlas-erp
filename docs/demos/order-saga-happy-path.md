@@ -6,7 +6,7 @@ OrderPlaced → InventoryReserved → InvoiceCreated → PaymentSucceeded → (o
 
 ## Preconditions
 - All services running in compose
-- Auth available (Keycloak) **[FILL AFTER IMPLEMENTATION]**
+- Auth available (Keycloak realm `atlas-erp`, client `atlas-gateway`)
 - Kafka configured
 - Reporting projections enabled
 
@@ -23,6 +23,13 @@ OrderPlaced → InventoryReserved → InvoiceCreated → PaymentSucceeded → (o
 - Logs show consistent correlationId across services.
 - Reporting API returns updated `order_summary`.
 
-**[FILL AFTER IMPLEMENTATION]** Provide curl commands and sample responses once endpoints are defined.
+Example (template):
+```bash
+curl -X POST http://localhost:3000/v1/orders \\
+  -H 'Authorization: Bearer <token>' \\
+  -H 'Idempotency-Key: demo-001' \\
+  -H 'Content-Type: application/json' \\
+  -d '{\"customerId\":\"c-1\",\"items\":[{\"sku\":\"sku-1\",\"qty\":1}]}'
+```
 
 _Last updated: 2026-02-08_

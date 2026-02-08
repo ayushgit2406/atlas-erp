@@ -2,8 +2,7 @@
 
 This document describes authentication, authorization, and core security standards.
 
-> No assumptions are made about exact realm/client names until Keycloak config is implemented.
-> Placeholders are marked **[FILL AFTER IMPLEMENTATION]**.
+> Local defaults are defined for realm/client names; production can override via env/config.
 
 ---
 
@@ -32,8 +31,7 @@ This document describes authentication, authorization, and core security standar
 ## 3. Authorization (AuthZ)
 
 ### 3.1 Role model
-**[DECISION REQUIRED]** define roles and map to permissions.
-Template roles:
+Roles (v1):
 - Admin
 - Ops
 - Finance
@@ -92,7 +90,7 @@ Secrets mechanism:
 - HSTS (if TLS)
 - X-Content-Type-Options
 - X-Frame-Options (if relevant)
-- CORS policy (**[DECISION REQUIRED]**)
+- CORS policy: allow localhost origins for dev; deny by default in prod until explicit allowlist
 
 ---
 

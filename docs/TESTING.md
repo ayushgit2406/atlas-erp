@@ -45,7 +45,7 @@ See `docs/api/idempotency.md`.
 
 ## 4. Performance testing (Phase 7)
 
-- Load tests for command APIs (k6/locust) **[DECISION REQUIRED]**
+- Load tests for command APIs: **k6**
 - Consumer throughput tests
 - DB connection pool tuning tests
 
@@ -53,11 +53,11 @@ See `docs/api/idempotency.md`.
 
 ## 5. Quality gates
 
-**[DECISION REQUIRED]** CI gates:
+CI gates:
 - lint + format
 - unit tests required
 - integration tests required
 - contract tests required
-- coverage thresholds (if used)
+- coverage thresholds (optional)
 
 _Last updated: 2026-01-30_

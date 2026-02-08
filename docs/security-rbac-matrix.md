@@ -2,7 +2,7 @@
 
 This document defines the role-to-permission mapping.
 
-> **Status**: Draft template. Replace **[DECISION REQUIRED]** items with explicit choices.
+> **Status**: v1 baseline.
 
 ---
 

@@ -33,14 +33,14 @@ It is not a substitute for formal audits.
 Mitigations:
 - strict JWT validation (issuer, audience)
 - short-lived tokens
-- service-to-service auth (**[DECISION REQUIRED]**)
+- service-to-service auth: not required for event-only flows; if internal HTTP is added, use Keycloak service principals
 
 ### Tampering
 - event payload modification in transit
 - DB tampering via exposed ports
 
 Mitigations:
-- Kafka auth + TLS (**[DECISION REQUIRED]**)
+- Kafka auth + TLS: disabled for local; use SASL/SCRAM + TLS in prod-like deployments
 - restrict network exposure
 - DB credentials least privilege
 
@@ -73,7 +73,7 @@ Mitigations:
 
 Mitigations:
 - explicit RBAC matrix
-- centralized policy tests (**[DECISION REQUIRED]**)
+- centralized policy tests: required for authz rules (unit tests per service)
 
 ---
 
@@ -81,6 +81,6 @@ Mitigations:
 
 - dependency scanning
 - container scanning
-- SAST/DAST (**[DECISION REQUIRED]**)
+- SAST: CodeQL (DAST deferred)
 
 _Last updated: 2026-02-08_

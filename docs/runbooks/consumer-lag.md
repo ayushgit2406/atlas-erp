@@ -12,7 +12,7 @@
 
 ## Mitigation
 - scale consumers (**[DECISION REQUIRED: scaling model]**)
-- temporarily increase partitions (**[DECISION REQUIRED]**)
+- temporarily increase partitions (recreate topic with higher partitions; rebalance consumers)
 
 _Last updated: 2026-02-08_
 

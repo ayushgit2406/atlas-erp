@@ -40,10 +40,8 @@ Secrets strategy:
 - Liveness: `/health`
 - Readiness: `/ready` must validate dependencies (DB, broker, etc.)
 
-Rollout strategy (**[DECISION REQUIRED]**):
-- blue/green
-- rolling updates
-- canary
+Rollout strategy:
+- rolling updates (default)
 
 ---
 

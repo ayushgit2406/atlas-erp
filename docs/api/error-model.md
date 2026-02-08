@@ -41,4 +41,4 @@ Workflow:
 - APPROVAL_NOT_FOUND
 - APPROVAL_NOT_ALLOWED
 
-**[DECISION REQUIRED]** finalize taxonomy and ensure consistent naming.
+Taxonomy is finalized for v1; new codes must follow `DOMAIN_ACTION` naming and be documented here.

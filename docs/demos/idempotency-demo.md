@@ -11,4 +11,7 @@ Show that retries do not create duplicate effects.
 - Deliver the same `InventoryReserved` event twice
 - Expected: Billing creates only one invoice
 
-**[FILL AFTER IMPLEMENTATION]** Provide concrete steps once idempotency storage is implemented.
+Example (template):
+1. Send `POST /v1/orders` twice with the same `Idempotency-Key`.
+2. Expect the same `orderId` response both times.
+3. Verify only one `OrderPlaced` event was published.

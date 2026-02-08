@@ -18,6 +18,12 @@ Safely replay events to rebuild derived state (typically reporting projections).
 - duplicate side effects if consumers are not idempotent
 - long replay time causing extended staleness
 
-**[DECISION REQUIRED]** document Kafka-specific replay commands once tooling is selected (e.g., scripts or Kafka CLI).
+Kafka replay (template):
+```bash
+kafka-consumer-groups --bootstrap-server <broker> \
+  --group <consumer-group> \
+  --topic <topic> \
+  --reset-offsets --to-earliest --execute
+```
 
 _Last updated: 2026-02-08_

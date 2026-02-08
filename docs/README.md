@@ -14,7 +14,7 @@ This folder contains the documentation set for building and operating **Atlas ER
 9. **demos/** — scripted end-to-end scenarios
 
 ## Decision hygiene (no assumptions)
-Some documents contain **[DECISION REQUIRED]** markers. These represent items that must be explicitly decided and recorded in an ADR before implementation.
+Some documents contain **[FILL AFTER IMPLEMENTATION]** markers. These are placeholders that will be updated as code and infra are implemented.
 See `docs/adr/README.md` for the decision register.
 
 ## Document map

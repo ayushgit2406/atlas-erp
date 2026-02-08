@@ -3,7 +3,7 @@
 This document explains how to run Atlas ERP locally and how developers should work with the repo.
 
 > **Note**: Concrete port mappings, env vars, and compose service names should be finalized once docker-compose is implemented.
-> Until then, this doc contains **placeholders** marked as **[DECISION REQUIRED]** or **[FILL AFTER IMPLEMENTATION]**.
+> Until then, this doc contains **placeholders** marked as **[FILL AFTER IMPLEMENTATION]**.
 
 ---
 
@@ -37,12 +37,12 @@ This document explains how to run Atlas ERP locally and how developers should wo
 docker compose up -d
 ```
 
-**[FILL AFTER IMPLEMENTATION]** Expected containers:
-- Postgres per service
+Expected containers (local):
+- Kafka (KRaft) + broker tools
+- Postgres per service (orders, inventory, billing, workflow, reporting)
 - Redis
-- Broker (Kafka)
 - Keycloak
-- Services
+- API gateway + services
 
 ### 3.2 Verify health
 Each service should expose:
