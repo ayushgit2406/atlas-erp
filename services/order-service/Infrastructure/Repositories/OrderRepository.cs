@@ -19,6 +19,11 @@ public class OrderRepository : IOrderRepository
         await Task.CompletedTask;
     }
 
+    public async Task<Order?> GetByIdAsync(Guid orderId)
+    {
+        return await _db.Orders.FindAsync(orderId);
+    }
+
     public async Task ExecuteInTransactionAsync(Func<Task> operation)
     {
         await using var tx = await _db.Database.BeginTransactionAsync();

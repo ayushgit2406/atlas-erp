@@ -10,6 +10,8 @@ public class OrdersDbContext : DbContext
     public DbSet<Order> Orders => Set<Order>();
     public DbSet<OrderItem> OrderItems => Set<OrderItem>();
     public DbSet<OutboxEvent> OutboxEvents => Set<OutboxEvent>();
+    public DbSet<InboxEvent> InboxEvents => Set<InboxEvent>();
+
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
@@ -46,5 +48,14 @@ public class OrdersDbContext : DbContext
             b.Property(e => e.OccurredAt).IsRequired();
             b.Property(e => e.RetryCount).HasDefaultValue(0);
         });
+
+        modelBuilder.Entity<InboxEvent>(b =>
+{
+    b.ToTable("inbox_events");
+    b.HasKey(e => e.Id);
+    b.Property(e => e.EventType).IsRequired();
+    b.Property(e => e.ProcessedAt).IsRequired();
+});
+
     }
 }

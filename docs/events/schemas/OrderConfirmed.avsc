@@ -1,0 +1,8 @@
+{
+  "type": "record",
+  "name": "OrderConfirmed",
+  "namespace": "atlas.erp.orders",
+  "fields": [
+    { "name": "orderId", "type": "string" }
+  ]
+}
